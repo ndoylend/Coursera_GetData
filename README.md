@@ -5,24 +5,25 @@ ND 2014-07-27
 
 ## Source Data
 
-The raw data is was provided as a .zip file containing a number of subdirectories and 
-plain text files. A detailed description of the data in provided by the **README.txt**
-and **features_info.txt** files. 
+The [raw data](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+was provided as a .zip file containing a number of subdirectories and 
+plain text files. A detailed description of the data is provided by the `README.txt`
+and `features_info.txt` files. 
 
 The raw data was partitioned into training and test datasets. These datasets contain
 respectively 7352 and 2947 records. Within each dataset there are three text files 
-prefixed **y_**, **X_** and **subject_**.
+prefixed **y_**, **X_** and **subject_**. These files contain the following data:
 
 * **y_** - each row contains a single value, corresponding to the activity codes listed in activity_labels.txt
 * **X_** - each row contains 561 values, corresponding to the feature codes listed in features.txt
 * **subject_** - each row of contains a subject ID in the range from 0 to 30
 
 Each dataset also includes an Inertial Signals subdirectory that contains nine files,
-in which, each row contains a vector of 128 values.
+in which each row contains a vector of 128 values.
 
 ## Processing Script
 
-The following steps described the operation of the script `run_analysis.R`, used to merge, tidy
+The following steps describe the operation of the script `run_analysis.R`, used to merge, tidy
 and summarise the raw data.
 
 1. The script loads the activity, feature and subject data from each of the two datasets.
@@ -36,7 +37,7 @@ is possible to combine data from the three files into a single dataframe using `
 for the feature data columns.
 
 4. Since only mean and standard deviation data are required the script then creates a new
-dataframe containing the subset of matching columns for further processing.
+dataframe containing the subset of relevant columns (matched by `grep`) for further processing.
 
 5. The script loads the descriptive activity labels and merges them into the new dataframe.
 As the `merge` function does not preserve the order of original data the `join` function
@@ -46,7 +47,7 @@ from the plyr package is used instead.
 provides a quick way to aggregate multiple columns. A new data table is created with
 function data summarised by mean for each subject and activity.
 
-7. The new summary data table is finally saved as the tidied dataset in .csv text format 
+7. The new summary data table is finally saved as the tidy dataset in .csv text format 
 with Windows style line endings.
 
 ## Codebook
