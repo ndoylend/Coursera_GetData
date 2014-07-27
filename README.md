@@ -47,7 +47,7 @@ from the plyr package is used instead.
 provides a quick way to aggregate multiple columns. A new data table is created with
 function data summarised by mean for each subject and activity.
 
-7. The new summary data table is finally saved as the tidy dataset in .csv text format 
+7. The new summary data table is finally saved as the [tidy dataset](tidy.data.csv) in .csv text format 
 with Windows style line endings.
 
 ## Codebook

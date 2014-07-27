@@ -1,7 +1,7 @@
 Codebook
 ========
 
-This codebook describes the variables in the tidy data set (`tidy.data.csv`).
+This codebook describes the variables in the tidy data set ([`tidy.data.csv`](tidy.data.csv)).
 
 The value assigned to each numeric variable is the mean of that variable for each subject and activity.
 
