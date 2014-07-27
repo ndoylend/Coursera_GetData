@@ -23,7 +23,7 @@ in which each row contains a vector of 128 values.
 
 ## Processing Script
 
-The following steps describe the operation of the script `run_analysis.R`, used to merge, tidy
+The following steps describe the operation of the script [`run_analysis.R`](run_analysis.R), used to merge, tidy
 and summarise the raw data.
 
 1. The script loads the activity, feature and subject data from each of the two datasets.
@@ -52,4 +52,4 @@ with Windows style line endings.
 
 ## Codebook
 
-The codebook describing the variables is included in a separate file, `codebook.md`.
+The codebook describing the variables is included in a separate file, [`codebook.md`](codebook.md).
